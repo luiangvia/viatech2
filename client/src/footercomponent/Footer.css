@@ -1,0 +1,11 @@
+.footer {
+    background: rgb(58, 107, 101);
+    color: white;
+    height: 50px;
+    text-align: end;
+    bottom: 0;
+    width: 100%;
+}
+.footerp{
+padding: 15px 20px 0px 0px;   
+}

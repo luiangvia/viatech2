@@ -1,0 +1,16 @@
+.formdiv{
+    background: white;
+    width: 60%;
+    margin-left: 30px;
+    padding: 20px;
+}
+.no{
+    background: red;
+    width: 10%;
+    text-align: center;
+}
+.yes{
+    background: green;
+    width: 10%;
+    text-align: center;
+}

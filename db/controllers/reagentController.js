@@ -9,7 +9,10 @@ module.exports = {
             // reagent will be an array of all Reagent instances
             //this is used to list all regaents after clicking reagent button
           })
-      }
+      },
+      findOne: function(req,res){
+        db.Reagent.findById(req.params.id).then(reagent=>{res.json(reagent)})
+    }
 }
 
 

@@ -5,5 +5,7 @@ const reagentController = require("../../db/controllers/reagentController");
 router.route("/")
     .get(reagentController.findAll);
 
+    router.route("/:id")
+    .get(reagentController.findOne);
 
 module.exports = router;

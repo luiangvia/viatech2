@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, NavLink, Redirect, Prompt } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect } from 'react-router-dom';
 import Logincomponent from "../../logincomponents/Logincomponent";
 import './LoginPageFE.css';
 import Header from '../../headercomponent/Header';

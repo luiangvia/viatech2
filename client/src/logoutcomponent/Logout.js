@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./Logout.css";
-import { BrowserRouter as Router, Route, Link, NavLink, Redirect, Prompt } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect } from 'react-router-dom';
 export default class Logout extends Component {
     state = {
         

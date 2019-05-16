@@ -4,6 +4,7 @@
     height: 50px;
     text-align: end;
     bottom: 0;
+    position: fixed;
     width: 100%;
 }
 .footerp{

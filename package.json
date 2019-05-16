@@ -15,11 +15,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.15.4",
+    "mysql": "^2.17.1",
+    "mysql-import": "^2.0.2",
+    "mysql2": "^1.5.3",
+    "react-router-dom": "^5.0.0",
+    "sequelize": "^4.37.8",
+    "server": "^1.0.18"
   }
 }
+

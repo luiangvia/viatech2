@@ -1,31 +1,33 @@
 module.exports = function (sequelize, Sequelize) {
     var ProjectStage = sequelize.define("ProjectStage", {
-        /*
+        
         id: {
             type: Sequelize.INTEGER,
             primaryKey: true,
-            autoIncrement: true
-        }
-        */
+            autoIncrement: true 
+        },
+        
         
         projectId: {
-            type: Sequelize.INTEGER,
-            allowNull: false,
+            type: Sequelize.INTEGER
+           // allowNull: false,
+            /*
             references:{
-                model:'Project',
+                model:'Project',  
                 key:'id'
-            }
+            }*/
         },
             stageId: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
+                type: Sequelize.INTEGER
+               // allowNull: false
+                /*,
                 references:{
                     model:'Stage',
                     key:'id'
-                }
+            }*/
         }
     }, { timestamps: false });
-
+/*
     ProjectStage.associate = function(models) {
         // Associating User with Project
         // When an User is deleted, restrict delete of any associated Projects
@@ -39,6 +41,7 @@ module.exports = function (sequelize, Sequelize) {
       };
         //Project.belongsToMany(Run, {through: { model: ProjectStage, unique: false }, foreignKey: 'id' });
         //Run.belongsToMany(Project, {through:{ model: ProjectStage, unique: false }, foreignKey: 'id' });
+        */
         return ProjectStage;
 } 
 

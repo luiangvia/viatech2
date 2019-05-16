@@ -4,6 +4,7 @@ var db = require("./db/models");
 const app = express();
 const bodyParser = require("body-parser");
 var PORT = process.env.PORT || 3001;
+const mysql_import = require('mysql-import');
 
 const routes = require("./routes");
 
@@ -32,16 +33,16 @@ db.sequelize.sync().then(function () {
   });
 });
 
-// setTimeout(seedDB, 10000);
+setTimeout(seedDB, 10000);
 
-// function seedDB(){
-// require('mysql-import').config({
-// 	host: '127.0.0.1',
-// 	user: 'root',
-// 	password: '92Lu13iaV$',
-// 	database: 'viatech',
-// 	onerror: err=>console.log(err.message)
-// }).import('seed.sql').then(()=> {
-// 	console.log('all sql statements have been executed')
-// });
-// }
+function seedDB(){
+require('mysql-import').config({
+	host: '127.0.0.1',
+	user: 'root',
+	password: 'root',
+	database: 'viatech',
+	onerror: err=>console.log(err.message)
+}).import('seed.sql').then(()=> {
+	console.log('all sql statements have been executed')
+});
+}

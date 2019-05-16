@@ -46,6 +46,27 @@ module.exports = function (sequelize, Sequelize) {
 
     },  { timestamps: false });
 
+Run.associate = function (models) {
+    Run.belongsToMany(models.Stage, {
+      through: {
+        model: models.StageRun,
+        unique: false
+      },
+      foreignKey: 'runId'
+    });
+    
+
+    Run.belongsToMany(models.Reagent, {
+      through: {
+        model: models.RunReagent,
+        unique: false
+      },
+      foreignKey: 'runId'
+    });
+    
+  }
+  
+
     return Run;
   };
   

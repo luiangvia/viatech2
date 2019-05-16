@@ -7,6 +7,21 @@ module.exports = {
         db.Reagent.findAll(/*put options to filter here*/).then(reagent => {
             res.json(reagent);
             // reagent will be an array of all Reagent instances
+            //this is used to list all regaents after clicking reagent button
           })
       }
 }
+
+
+
+//need function to post reagent ids and data to newly created run id inside of stage id inside of projectid    
+    //hook/lifeycle - used after submitting new run, also submits new reagents to run created inside of tageid inside of projectid
+
+
+    //need function for getting all reagent names from ids, and all runs with ids,
+// from inside stage id inside project id
+    //used for reagent summary
+
+
+
+

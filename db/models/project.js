@@ -16,15 +16,17 @@ module.exports = function (sequelize, Sequelize) {
 
   Project.associate = function (models) {
     // Associating User with Project
-    // When an User is deleted, restrict delete of any associated Projects
     Project.belongsTo(models.User, {
-      //onDelete: "restrict"
+      //onDelete: "restrict"  // When an User is deleted, restrict delete of any associated Projects
     });
     
     Project.belongsToMany(models.Stage, {
-      //through: { model: models.ProjectStage },
-      through: 'ProjectStage' ,
-      as: 'stages', foreignKey: 'stageId'
+      //through: { model: models.ProjectStage },.
+      through: {
+        model: models.ProjectStage,
+        unique: false
+      },
+      foreignKey: 'projectId'
     });
     
     //Project.hasMany(models.Stage, {through:{model: models.ProjectStage} });  //may need a foreign key, test with debugger

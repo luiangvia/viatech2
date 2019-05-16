@@ -15,6 +15,41 @@ module.exports = function (sequelize, Sequelize) {
   }, { timestamps: false });
 
   Stage.associate = function (models) {
+    Stage.belongsToMany(models.Project, {
+      through: {
+        model: models.ProjectStage,
+        unique: false
+      },
+      foreignKey: 'stageId'
+    });
+    Stage.belongsToMany(models.Run, {
+      through: {
+        model: models.StageRun,
+        unique: false
+      },
+      foreignKey: 'stageId'
+    });
+     
+  }
+ 
+/*
+  Stage.associate = function (models) {
+    Stage.belongsToMany(models.Run, {
+      through: {
+        model: models.StageRun,
+        unique: false
+      },
+      foreignKey: 'stageIdFk'
+    });
+     
+  }
+ 
+
+*/
+
+
+/*
+  Stage.associate = function (models) {
     // Associating User with Stage
     // When an User is deleted, restrict delete of any associated Stages
 
@@ -26,7 +61,7 @@ module.exports = function (sequelize, Sequelize) {
     
     //Stage.hasMany(models.Project, {through:{model: models.ProjectStage} });  //may need a foreign key, test with debugger
   };
-
+*/
   return Stage;
 };
 

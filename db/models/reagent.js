@@ -18,6 +18,16 @@ module.exports = function (sequelize, Sequelize) {
 
     },  { timestamps: false });
 
+Reagent.associate = function (models) {
+    Reagent.belongsToMany(models.Run, {
+      through: {
+        model: models.RunReagent,
+        unique: false
+      },
+      foreignKey: 'reagentId'
+    });
+  }
+
     return Reagent;
   };
   

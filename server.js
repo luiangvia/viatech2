@@ -31,3 +31,17 @@ db.sequelize.sync().then(function () {
     console.log(`App listening on PORT" + ${PORT}!`);
   });
 });
+
+// setTimeout(seedDB, 10000);
+
+// function seedDB(){
+// require('mysql-import').config({
+// 	host: '127.0.0.1',
+// 	user: 'root',
+// 	password: '92Lu13iaV$',
+// 	database: 'viatech',
+// 	onerror: err=>console.log(err.message)
+// }).import('seed.sql').then(()=> {
+// 	console.log('all sql statements have been executed')
+// });
+// }

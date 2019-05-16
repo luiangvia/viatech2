@@ -24,10 +24,9 @@
     "express": "^4.15.4",
     "mysql": "^2.17.1",
     "mysql-import": "^2.0.2",
-    "mysql2": "^1.5.3",
+    "mysql2": "^1.6.5",
     "react-router-dom": "^5.0.0",
-    "sequelize": "^4.37.8",
+    "sequelize": "^4.44.0",
     "server": "^1.0.18"
   }
 }
-

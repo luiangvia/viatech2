@@ -3,29 +3,29 @@ const db = require("../models");
 //MODEL USAGE IN DOCS
 //http://docs.sequelizejs.com/manual/models-usage.html#-code-findall--code----search-for-multiple-elements-in-the-database
 module.exports = {
-    findAll: function(req, res) {
+    findAll: function (req, res) {
         db.Run.findAll(/*put options to filter here*/).then(controller => {
             res.json(controller);
             // controller will be an array of all Controller instances
-          })
-      },
-      findAll: function(req, res) { //check for projectid if appended or on the request
-        if(req.stageId){ //if the projectid is on the request, then we use it to get the stages in that projectid
+        })
+    },
+    findAll: function (req, res) { //check for projectid if appended or on the request
+        if (req.stageId) { //if the projectid is on the request, then we use it to get the stages in that projectid
             db.Project.findById(req.projectId)
-            .then(project=>{project.getStages({where:"id ="+req.stageId})})
-            .then(stage=>{stage.getRuns()})
-            .then(runs=>{
-                res.json(runs) //respond with stages
-            })
+                .then(project => {return project.getStages({ where: "id = " + req.stageId }) })
+                .then(stage => {return stage.getRuns() })
+                .then(runs => {
+                    res.json(runs) //respond with stages
+                })
         }
     },
-    findOne: function(req,res){
-        db.Run.findById(req.params.id).then(run=>{res.json(run)})
+    findOne: function (req, res) {
+        db.Run.findById(req.params.id).then(run => { res.json(run) })
     },
-    
-    appendRunId: function(req,res,next){ //we're appending projectid to our request and go on to next route with that projectid in the request
-    req.runId = req.params.id  //creating new property on projectid and setting to id coming from paramters / adding property of projectid to request , we're getting so we can look up the project in the stages route/controller
-    next()
+
+    appendRunId: function (req, res, next) { //we're appending projectid to our request and go on to next route with that projectid in the request
+        req.runId = req.params.id  //creating new property on projectid and setting to id coming from paramters / adding property of projectid to request , we're getting so we can look up the project in the stages route/controller
+        next()
     }
 }
 
@@ -38,3 +38,19 @@ module.exports = {
 //need function to post run id with all run data, (and reagent ids?), into stage id inside of projectid
     //used after clicking on add run and submitting
 
+/*
+altertive findall (inside fundall function)
+
+                    let stage = stages.filter( //iterates over all elements i nstages array
+                        s => s.dataValues.id === req.stageId //s is current element of array list / being checked if that element matches stage id element
+                    );  //also filter: look through array of stages and pick matching stage id
+                    //filter passes an arrow fucnto nthat returns true or false / if true, filter returns element fro mstages array that returnd true
+                    console.log(stage);
+                    //console.log(stageId);h
+                    console.log(req.stageId);
+                    return stage.getRuns({});
+                })
+                .then(runs => {
+                    res.json(runs) //respond with runs
+                })
+*/

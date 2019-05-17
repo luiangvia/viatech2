@@ -5,16 +5,17 @@ const db = require("../models");
 module.exports = {
     findAll: function (req, res) {
         if (req.projectId) {
-            db.Project.findById(req.projectId).then(project => { project.getStages() }) //get project id of specfic project and getstages for that project
+            db.Project.findById(req.projectId).then(project => { return project.getStages() }) //get project id of specfic project and getstages for that project
                 .then(stages => {
+                    //console.log(stages);
                     res.json(stages)
                 })
         } else {
             db.Stage.findAll().then(stage => {
                 res.json(stage)
-            })}
+            })
+        }
     },
-
 
     findOne: function (req, res) {
         db.Stage.findById(req.params.id).then(stage => { res.json(stage) })

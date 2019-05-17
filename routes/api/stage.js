@@ -6,6 +6,11 @@ const run = require("./run");
 router.route("/")
     .get(stageController.findAll);
 
+    router.route("/:id")
+    .get(stageController.findOne);
+
     router.use("/:id/run",stageController.appendStageId,run); 
+
+
 
 module.exports = router;

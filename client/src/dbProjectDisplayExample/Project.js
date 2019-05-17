@@ -8,22 +8,22 @@ import axios from 'axios';
 
 //this is a CONTAINER
 export default class Project extends Component {
-state = {stages:[]}
-loadStages = (event) =>{
-  event.preventDefault();
-  axios.get("http://localhost:3000/api/project/"+this.props.project.id+"/stage").then(data => {
+  state = { stages: [] }
+  loadStages = (event) => {
+    event.preventDefault();
+    axios.get("http://localhost:3000/api/project/" + this.props.project.id + "/stage").then(data => {
 
-    this.setState({ stages: data.data })
-   
-  });
-}
+      this.setState({ stages: data.data })
+
+    });
+  }
 
 
   render() {
     return (
       <div>
         <Button variant="primary" onClick={this.loadStages}>{this.props.project.name}</Button>
-        
+
       </div>
     )
   }

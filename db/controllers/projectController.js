@@ -18,7 +18,17 @@ module.exports = {
         req.projectId = req.params.id  //creating new property on projectid and setting to id coming from paramters / adding property of projectid to request , we're getting so we can look up the project in the stages route/controller
         next() //uses next route which finds stages / moves to stage route
         // appendProjectId,stage <---- this is the next route
-    }
+    },
+    
+  // POST route for saving a new project
+  createProject: function(req, res) {
+    db.Project.create({
+      name: req.body.name
+    })
+      .then(function(dbProject) {
+        res.json(dbProject);
+      });
+  }
 }
 
 //need function to post project when project submitted after clicking add project

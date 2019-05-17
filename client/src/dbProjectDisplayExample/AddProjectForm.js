@@ -10,15 +10,15 @@ export default class AddProjectForm extends Component {
     
     
     handleChange = (event,value)=>{
-        this.setState({projectname: event.target.value})
-        //console.log(event.target.value);
+        this.setState({name: event.target.value})
+        console.log(event.target.value);
     }
 
     handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post('/projects', {
-            projectname: this.state.projectname
+        axios.post('http://localhost:3000/api/project/create', {
+            name: this.state.name
         })
             .then(function (response) {
                 console.log(response);
@@ -35,9 +35,9 @@ export default class AddProjectForm extends Component {
             <form onSubmit={this.handleSubmit}>
                 <label>
                     Project Name:
-        <input type="text" name="projectname" onChange={this.handleChange} />
+        <input type="text" name="name" onChange={this.handleChange} />
                 </label>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit New Project" />
             </form>
 
         )

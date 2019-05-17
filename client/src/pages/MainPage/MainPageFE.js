@@ -11,8 +11,11 @@ import Projectcategory from '../../projectcontainer/projectcategorycomponent/Pro
 import SummaryButton from '../../projectcontainer/runcontainer/summaryReagentsComponent/summaryButton/SummaryButton';
 
 
-//example imports below
+//example imports
 import ListProjects from '../../dbProjectDisplayExample/ListProjects';
+//import ListStages from '../../dbProjectDisplayExample/ListStages';
+//<ListStages/>
+
 import AddProjectForm from '../../dbProjectDisplayExample/AddProjectForm';
 import Logout from '../../logoutcomponent/Logout';
 

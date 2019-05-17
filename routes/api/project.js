@@ -10,7 +10,10 @@ router.route("/:id")
   .get(projectController.findOne);
 
   router.use("/:id/stage",projectController.appendProjectId,stage); //',stage" sets value of next() for findStags fucntion
-/* example code below
+
+
+router.route("/create").post(projectController.createProject);
+  /* example code below
 const router = require("express").Router();
 const booksController = require("../../controllers/booksController");
 

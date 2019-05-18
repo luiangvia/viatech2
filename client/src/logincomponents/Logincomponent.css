@@ -1,0 +1,47 @@
+.loginComponentDiv{
+text-align: center;
+}
+.logoImage{
+    height: 300px;
+    width: 300px;
+    
+}
+.loginLabel{
+   font-family: "Times New Roman", Times, serif;
+   color:grey;
+   font-size: 40px;
+   font-weight: 700;
+}
+
+.usernameInputBox{
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    margin:5px;
+    border: solid 2px lightblue;
+}
+
+.usernameInputBox::placeholder {
+    text-align: center;
+    font-size: 1.5em;
+    color: lightblue
+  }
+.passwordInputBox{
+    height: 30px;
+    width: 200px;
+    margin:5px; 
+    border-radius: 10px;
+    border: solid 2px lightblue; 
+}
+
+
+.passwordInputBox::placeholder {
+    text-align: center;
+    font-size: 1.5em;
+    color: lightblue
+  }
+#loginButton{
+width: 200px;
+margin: 5px 0px 10px 0px;
+}
+

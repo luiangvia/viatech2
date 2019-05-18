@@ -1,0 +1,12 @@
+.runlist{
+    border:black;
+    border-width: 2px;
+    font-size: 20px;
+    border-style: solid;
+    margin: 4px;
+    width:7%;
+    text-align: center;
+    background: grey;
+    font-weight: 700;
+    margin-left: 120px;
+}

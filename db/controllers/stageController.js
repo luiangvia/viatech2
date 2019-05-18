@@ -1,5 +1,7 @@
 const db = require("../models");
 
+//this controller and model is no longer used
+
 //MODEL USAGE IN DOCS
 //http://docs.sequelizejs.com/manual/models-usage.html#-code-findall--code----search-for-multiple-elements-in-the-database
 module.exports = {

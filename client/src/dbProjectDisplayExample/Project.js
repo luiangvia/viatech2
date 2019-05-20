@@ -13,7 +13,7 @@ export default class Project extends Component {
   loadRuns = (event) => {
     event.preventDefault();
     //http://localhost:3000/api/project/1/stage
-    axios.get("http://localhost:3000/api/project/" + this.props.project.id + "/run").then(data => {
+    axios.get("/api/project/" + this.props.project.id + "/run").then(data => {
      let isArray = Array.isArray(data.data);
      console.log(data.data);
     if(isArray){

@@ -22,6 +22,16 @@ import Logout from '../../logoutcomponent/Logout';
 
 
 class MainPageFE extends Component {
+    /* old components below, disabled
+          <Projectsearchbarcomponent operation={this.operation} />
+                {this.state.showMe ? <Projectlist handleCategory={this.handleCategory} /> : null}
+                {this.state.showMeCategory ? <Projectcategory handleRun={this.handleRun} /> : null}
+                {this.state.showMeRun ? <Addrun handleAddRunForm={this.handleAddRunForm}/> : null}
+                {this.state.showMeRun ? <Runlist  />: null}
+                {this.state.showMeAddRunForm ?<AddRunForm />: null}
+                {this.state.showMeRun ? <SummaryButton handleSummaryReagents={this.handleSummaryReagents}/> : null}
+                {this.state.showMeSummaryReagents ?<SummaryReagents />: null}
+    */
 
     state = {
         // showMe: false,
@@ -61,14 +71,7 @@ class MainPageFE extends Component {
                 <Header />
                 <ListProjects/>
                 <AddProjectForm/>
-                <Projectsearchbarcomponent operation={this.operation} />
-                {this.state.showMe ? <Projectlist handleCategory={this.handleCategory} /> : null}
-                {this.state.showMeCategory ? <Projectcategory handleRun={this.handleRun} /> : null}
-                {this.state.showMeRun ? <Addrun handleAddRunForm={this.handleAddRunForm}/> : null}
-                {this.state.showMeRun ? <Runlist  />: null}
-                {this.state.showMeAddRunForm ?<AddRunForm />: null}
-                {this.state.showMeRun ? <SummaryButton handleSummaryReagents={this.handleSummaryReagents}/> : null}
-                {this.state.showMeSummaryReagents ?<SummaryReagents />: null}
+          
                 <Footer />
             </div>
         )

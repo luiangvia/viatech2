@@ -9,6 +9,14 @@ import SummaryReagents from '../../projectcontainer/runcontainer/summaryReagents
 import AddRunForm from '../../projectcontainer/runcontainer/addruncontainer/addrunformcomponent/AddRunForm';
 import Projectcategory from '../../projectcontainer/projectcategorycomponent/Projectcategory';
 import SummaryButton from '../../projectcontainer/runcontainer/summaryReagentsComponent/summaryButton/SummaryButton';
+import Reagent from '../../reagantcontainer/reagentscontainercomponent/Reagent';
+import Reagentlist from '../../reagantcontainer/reagentlistcomponent/Reagentlist';
+import Description from '../../reagantcontainer/descriptioncomponent/Description';
+import Reagentform from '../../reagantcontainer/reagentformcomponent/Reagentform';
+
+
+
+
 
 
 //example imports
@@ -60,8 +68,15 @@ class MainPageFE extends Component {
                 <Logout/>
                 <Header />
                 <ListProjects/>
+                <Reagent/>
                 <AddProjectForm/>
                 <Projectsearchbarcomponent operation={this.operation} />
+
+
+                {this.state.showMe? <Reagentlist handleDescription ={this.handleDescription} /> : null }
+                {this.state.showMeDesciption ? <Description handleDescription ={this.handleDescription} /> : null}
+                {this.state.showMeReagentForm ? <Reagentform/> :null }
+
                 {this.state.showMe ? <Projectlist handleCategory={this.handleCategory} /> : null}
                 {this.state.showMeCategory ? <Projectcategory handleRun={this.handleRun} /> : null}
                 {this.state.showMeRun ? <Addrun handleAddRunForm={this.handleAddRunForm}/> : null}

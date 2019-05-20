@@ -11,7 +11,7 @@ export default class Stage extends Component {
 state = {runs:[]}
 loadRuns = (event) =>{
   event.preventDefault();
-  axios.get("http://localhost:3000/api/project/"+this.props.project.id+"/stage/"+this.props.stage.id+"/run").then(data => {
+  axios.get("/api/project/"+this.props.project.id+"/stage/"+this.props.stage.id+"/run").then(data => {
 
     this.setState({ runs: data.data })
    

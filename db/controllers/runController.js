@@ -11,19 +11,19 @@ const stage = {
 //MODEL USAGE IN DOCS
 //http://docs.sequelizejs.com/manual/models-usage.html#-code-findall--code----search-for-multiple-elements-in-the-database
 module.exports = {
-    findAll: function (req, res) {
-        db.Run.findAll(/*put options to filter here*/).then(controller => {
+    /*findAll: function (req, res) {
+        db.Run.findAll().then(controller => {
             res.json(controller);
             // controller will be an array of all Controller instances
         })
     },
-    findAll: function (req, res) { //check for projectid if appended or on the request
+*/    findAll: function (req, res) { //check for projectid if appended or on the request
         if (req.projectId) { //if the projectid is on the request, then we use it to get the stages in that projectid
             db.Project.findByPk(req.projectId)
                 .then(project => {
                     return project.getRuns()
-                })
-                .then(runs => {
+                }) //all of the above is hititng the database
+                .then(runs => { //once we have runs, we manipulate the data from the db, or define the response (below)
                     //runs.StageId
 
                     //creating a object to sort the runs by stageId

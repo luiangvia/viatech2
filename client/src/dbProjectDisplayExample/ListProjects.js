@@ -29,7 +29,7 @@ export default class LoadProject extends Component {
     */
     //api call using axios / axios gets promise, waits to resolve, then gets data
     // axios.get("http://localhost:3000/api/project").then(data => {
-    axios.get("http://localhost:3000/api/project").then(data => {
+    axios.get("/api/project").then(data => {
       //if data.status===200, then set state, else display"dataload failed"; <-everytime you're getting something check for data like this / axios also has a .then.catch (which does the same thing)
 
       //set state to store data

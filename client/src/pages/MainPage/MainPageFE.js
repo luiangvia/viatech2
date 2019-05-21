@@ -74,7 +74,7 @@ class MainPageFE extends Component {
 
 
                 {this.state.showMe? <Reagentlist handleDescription ={this.handleDescription} /> : null }
-                {this.state.showMeDesciption ? <Description handleDescription ={this.handleDescription} /> : null}
+                {this.state.showMeDesciption ? <Description/> : null}
                 {this.state.showMeReagentForm ? <Reagentform/> :null }
 
                 {this.state.showMe ? <Projectlist handleCategory={this.handleCategory} /> : null}

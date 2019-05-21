@@ -32,4 +32,4 @@ For a better look at our site click on the link below!
 
 
 ## Link to our Web Application
-[Viatech](https://github.com/luiangvia/viatech2)
+[Viatech](https://hidden-ridge-76640.herokuapp.com/)

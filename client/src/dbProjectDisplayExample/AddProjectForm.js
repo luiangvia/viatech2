@@ -17,7 +17,7 @@ export default class AddProjectForm extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         
-        axios.post('http://localhost:3000/api/project/create', {
+        axios.post('/api/project/create', {
             name: this.state.name
         })
             .then(function (response) {

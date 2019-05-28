@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Button } from 'react-bootstrap';
 import "./Reagent.css"
 import axios from 'axios';
-import Reagent from '../reagentscontainercomponent/Reagent'
+import Reagent from './Reagent'
 import Reagentform from '../reagentformcomponent/Reagentform';
 
 

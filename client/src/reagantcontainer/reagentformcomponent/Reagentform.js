@@ -10,14 +10,14 @@ handleSubmitForm = submitFormEvent => {
     return (
       <div>
           <form>
-            <label className="reagentname">Reagent Name:</label>
+            <label className="reagentname" type="text">Reagent Name:</label>
             <input className="rrnamebox"></input>
             <br/>
             <label className="lotnumber">Lot Number:</label>
-            <input className="lnamebox"></input>
+            <input className="lnamebox" type="text"></input>
             <button type="submit">Submit Form</button>
           </form>
-        
+          
       </div>
     )
   }

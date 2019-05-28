@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import ".//Reagentlist.css"
+import "./Reagentlist.css"
  
 export default class Reagentlist extends Component {
         handleDescriptionClick=(showDescription)=>{
           showDescription.preventDefault();
           this.props.handleDescription(true);
-
-render() 
+        }
+render() {
    return (
       <div>
           {

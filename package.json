@@ -23,7 +23,7 @@
     "axios": "^0.18.0",
     "if-env": "^1.0.4",
     "body-parser": "^1.18.3",
-    "express": "^4.15.4",
+    "express": "^4.17.3",
     "mysql": "^2.17.1",
     "mysql-import": "^2.0.2",
     "mysql2": "^1.6.5",
